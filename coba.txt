@@ -1,0 +1,14 @@
+cara menghapus tooltip pada boostrap untuk hapus tooltipnya;
+  $("#input-username-signup").removeAttr(
+          "data-bs-toggle data-bs-placement data-bs-custom-class data-bs-title aria-describedby"
+        ).removeClass("is-danger");
+
+kode pemanggilan tooltipnya :
+function setTooltipAttributes(elementId, text) {
+  $(`#${elementId}`).attr({
+    "data-bs-toggle": "tooltip",
+    "data-bs-placement": "top",
+    "data-bs-custom-class": "custom-tooltip",
+    "data-bs-title": `${text}`,
+  });
+}

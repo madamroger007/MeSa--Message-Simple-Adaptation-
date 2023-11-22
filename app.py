@@ -23,7 +23,7 @@ TOKEN_KEY = os.environ.get("TOKEN_KEY")
 client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 app.config["TEMPLATE_AUTO_RELOAD"] = True
 app.config["UPLOAD_FOLDER"] = "./static/img/profile"
@@ -47,9 +47,9 @@ def home():
     try:
         payload = decode_token(token_receive)
         user_info = db.users.find_one({"username": payload.get("username")})
-        
+        nama = "adam"
         return render_template(
-            "index.html", user_info=user_info
+            "index.html", user_info=user_info, nama=nama
         )
     except jwt.ExpiredSignatureError:
         msg = "Your token has expired"
