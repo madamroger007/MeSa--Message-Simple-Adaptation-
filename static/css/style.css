@@ -112,15 +112,15 @@ input[type=text]::placeholder, input[type=password]::placeholder{
 .prof{
     min-width: 35px;
     min-height: 35px;
-    margin: auto 10px 0 10px;
-    background: black;
-    color: white;
-    font-weight: 700;
+    margin: 30px 10px 0 10px;
     text-align: center;
-    border-radius: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   
+}
+
+.prof .user{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
 }
 
 .messArea{
@@ -481,3 +481,61 @@ border-radius: 10px;
 
     }
 
+is-sparta {
+    color: #e8344e important;
+}
+
+.button.is-sparta {
+background-color: #e8344e;
+border-color: transparent;
+color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+background-color: transparent;
+border-color: #e8344e;
+color: #e8344e !important;
+}
+
+.help {
+color: gray;
+}
+
+.modal-content{
+    width: 600px;
+    height: 80%;
+}
+
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+/* Coba */
+.is-sparta {
+    color: #e8344e important;
+}
+
+.button.is-sparta {
+background-color: #e8344e;
+border-color: transparent;
+color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+background-color: transparent;
+border-color: #e8344e;
+color: #e8344e !important;
+}
+
+.help {
+color: gray;
+}
+
+.modal-content{
+    width: 600px;
+    height: 80%;
+}
+
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}

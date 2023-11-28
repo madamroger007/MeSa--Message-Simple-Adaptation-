@@ -276,7 +276,7 @@ function validatePassword(password) {
 //* end Sign in sign up
 
 function is_nickname(asValue) {
-  let regExp = /^(?=.*[a-zA-Z])[-a-zA-Z0-9_.]{2,10}$/;
+  let regExp = /^(?=.*[a-zA-Z])[-a-zA-Z0-9_.]{8,20}$/;
   return regExp.test(asValue);
 }
 

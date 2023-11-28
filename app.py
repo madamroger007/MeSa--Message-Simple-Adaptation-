@@ -47,9 +47,9 @@ def home():
     try:
         payload = decode_token(token_receive)
         user_info = db.users.find_one({"username": payload.get("username")})
-        nama = "adam"
+     
         return render_template(
-            "index.html", user_info=user_info, nama=nama
+            "index.html", user_info=user_info
         )
     except jwt.ExpiredSignatureError:
         msg = "Your token has expired"
@@ -70,7 +70,7 @@ def user(username):
     token_receive = request.cookies.get(TOKEN_KEY)
     try:
         payload = decode_token(token_receive)
-        print(payload)
+       
         status = username == payload.get("username")
         user_info = db.users.find_one({"username": username}, {"_id": False})
         return render_template("user.html", user_info=user_info, status=status)
@@ -172,11 +172,11 @@ def posting():
     token_receive = request.cookies.get(TOKEN_KEY)
     try:
         payload = decode_token(token_receive)
-        print(payload)
+    
         user_info = db.users.find_one({"username": payload.get("username")})
         comment_receive = request.form.get("comment_give")
         date_receive = request.form.get("date_give")
-        print(user_info)
+    
         doc = {
             "username": user_info.get("username"),
             "profile_name": user_info.get("profile_name"),
@@ -198,11 +198,12 @@ def get_posts():
         payload = decode_token(token_receive)
         username_receive = request.args.get("username_give")
         if username_receive == "":
-            posts = list(db.posts.find({}).sort("date", -1).limit(20))
+            posts = list(db.posts.find({}).sort("date", 1).limit(20))
         else:
             posts = list(
-                db.posts.find({"username": username_receive}).sort("date", -1).limit(20)
+                db.posts.find({"username": username_receive}).sort("date", 1).limit(20)
             )
+
         for post in posts:
             post["_id"] = str(post["_id"])
             # heart

@@ -112,7 +112,13 @@
   </div>
   <div class="shareLink">
           <div class="welcomeMess" style="margin-top: 0;">
-              <div class="img"> <img src="{{ url_for('static', filename=user_info.profile_pic_real) }}" alt="user"></div>
+              <div class="img"> 
+            <a href="/user/{{ user_info.username }}">
+
+              <img src="{{ url_for('static', filename=user_info.profile_pic_real) }}" alt="user">
+            </a>
+                
+              </div>
               <h1 class="roomTitle" class="roomTitle">Error Pharsing</h1>
               <p id="copyLinker2" class="copyLinker2">#4987720</p>
           </div>
@@ -124,7 +130,12 @@
 <div class="mainChater">
   <div class="headerDet">
       <div class="chatDety">
-          <div class="img"><img src="{{ url_for('static', filename=user_info.profile_pic_real) }}" alt="user"/></div>
+          <div class="img">
+            <a href="/user/{{ user_info.username }}">
+
+              <img src="{{ url_for('static', filename=user_info.profile_pic_real) }}" alt="user">
+            </a>
+          </div>
           <div class="nameC">
               <p class="roomTitle" id='titleFirst' class="roomTitle">Error Pharsing</p>
               <input type="text" name="room name" id="roomNameInput" class="roomTitle" value="Its BrainStorming">
@@ -139,84 +150,28 @@
 
 <div class="blackout"></div>
 
-  <div class="chatArea changeW">
-      <div class="chatMessages">
+  <div class="chatArea changeW" >
+      <div class="chatMessages" id="chatMessages">
             <!--Start of Chat cont-->
       <div class="welcomeMess">
-          <div class="img"><img src="{{ url_for('static', filename=user_info.profile_pic_real) }}" alt="user"/></div>
+          <div class="img">
+            <a href="/user/{{ user_info.username }}">
+
+              <img src="{{ url_for('static', filename=user_info.profile_pic_real) }}" alt="user">
+            </a>
+          </div>
           <h1 class="roomTitle">Error Pharsing</h1>
           <p id="copyLinker2" class="copyLinker2">#40</p>
       </div>
 
-      <div class="message"><div class="prof"><p>L</p></div>
-      <div class="messArea">
-          <p id="sname">Lance Francisco | Team Poster</p>
-          <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-          <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-      </div>
-
-      <div class="message mMess 1122334" data-number="1122334">
-      <div class="messArea">
-          <p id="sname">James Ericson</p>
-          <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-          <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
-      </div>
-
-      <div class="message"><div class="prof" style="background-color: #939b62;"><p>M</p></div>
-      <div class="messArea">
-          <p id="sname">Marcus Dilinmer</p>
-          <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-          <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-      </div>
-
-      <div class="message"><div class="prof" style="background-color: #ffb26b;"><p>A</p></div>
-      <div class="messArea">
-          <p id="sname">Alexandria Patkinson</p>
-          <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-          <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-      </div>
-
-      <div class="message"><div class="prof"><p>L</p></div>
-      <div class="messArea">
-          <p id="sname">Lance Francisco</p>
-          <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-          <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-      </div>
-
-      <div class="message mMess 1122334" data-number="1122334">
-      <div class="messArea">
-          <p id="sname">James Ericson</p>
-          <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-          <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
-      </div>
-
-      <div class="message"><div class="prof" style="background-color: #939b62;"><p>M</p></div>
-      <div class="messArea">
-          <p id="sname">Marcus Dilinmer</p>
-          <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-          <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-      </div>
-
-      <div class="message"><div class="prof" style="background-color: #ffb26b;"><p>A</p></div>
-      <div class="messArea">
-          <p id="sname">Alexandria Patkinson</p>
-          <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-          <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-      </div>
-
-  <div class="message"><div class="prof"><p>L</p></div>
-  <div class="messArea">
-      <p id="sname">Lance Francisco</p>
-      <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-      <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-  </div>
-<p class="timeId">8:43pm | 12/05/2021</p>
-  <div class="message mMess 1122334" data-number="1122334">
+  
+<!-- 
+  <div class="message mMess {{user_info._id}}" data-number="{{user_info._id}}">
       <div class="messArea">
           <p id="sname">James Ericson</p>
           <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
           <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
-  </div>
+  </div> -->
 <!--End of Chat cont-->
 </div>
 
@@ -225,7 +180,7 @@
       <button id="genMeetLink" class=" button-s1" tooltip="Google Meet" flow="right"><a href="https://meet.google.com/new" target="blank"><span class="material-icons">video_call</span></a></button>
       <button id="linkCopy" class="button-s1" tooltip="Copy Link" flow="up"><span class="material-icons">link</span></button>
       <div class="textA"><textarea id="message" name="message" rows="1" cols="30" placeholder="Type your message here"></textarea></div>
-      <button id="send" class="button-s1" tooltip="Send" flow="left"><span class="material-icons headerIcon">send</span></button>
+      <button onclick="sendT()" class="button-s1" tooltip="Send" flow="left"><span class="material-icons headerIcon">send</span></button>
   </div>
   <div id="goToDown" class="downDowny"><span class="material-icons" >arrow_downward</span></div>
   </div>
@@ -250,7 +205,7 @@
  
   <script>
     $(document).ready(function () {
-      // get_posts();
+      get_posts();
       
       // Check if the Toast has already been shown
     if (!sessionStorage.getItem('toastShown')) {
@@ -276,7 +231,8 @@
     })
     const profile_name = "{{ user_info.profile_name }}"
     const user_username = "{{ user_info.username  }}" 
-
+    const Iduser = "{{ user_info._id  }}"
+    const profile = "{{ user_info.profile_pic_real}}"
   </script>
    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
