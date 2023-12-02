@@ -1,0 +1,17 @@
+Laporan Mingguan
+Setelah beberapa hari pembelajaran dalam seminggu saya melaksanakan : 
+
+TIME BREAK (REVIEW MATERIAL)
+Saya pada hari senin 20 november 2023 melakukan review ulang materi dari chapter 1 sampai 12 untuk mengasah lagi kemampuan supaya bisa lebih menguasai materinya
+
+Certification Test DAY 1: Web Development Intermediate
+Pada hari Selasa 21 november 2023 saya mengikuti ujian test sertifikasi online dari mitra learningX untuk hari pertama saya di tes teori tentang pembelajaran dari LMS dengan mengisi jawaban pg di platform assosiative yang disediakan oleh mitra
+
+Certification Test DAY 2: Web Development Intermediate
+Pada hari Rabu 22 november 2023 saya mengikuti tes ke dua yang diadakan oleh mitra dengan ujian di tes praktik dengan membuat web menggunakan Flask 
+
+Certification Test DAY 3: Web Development Intermediate
+Pada hari Kamis 23 november 2023 saya mengikuti tes ke tiga yang diadakan oleh mitra dengan ujian tes wawancara yaitu saya di wawancara oleh mentor mengenai project web pada tes 2 dan juga problem solving dari pertanyaan mentor
+
+TIME BREAK (REVIEW MATERIAL)
+pada hari jumat 24 november 2023 saya melakukan review ulang materi untuk mengasah kemampuan saya pada framework flask dan refaktoring semua kode pada semua tugas projek yang telah dibuat
