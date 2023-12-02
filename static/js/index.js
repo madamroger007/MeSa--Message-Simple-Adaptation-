@@ -35,141 +35,152 @@ function get_posts(username) {
                     let class_thumbsup = post['thumbsup_by_me'] ? 'fa-thumbs' : 'fa-thumbs-o-up';
 
 
-    //                 let html_temp =
-    //                     `
-    //         <div class="box" id="${post['_id']}">
-    //   <article class="media">
-    //     <div class="media-left">
-    //       <a href="/user/${post['username']}" class="image is-64x64">
-    //         <img src="/static/${post['profile_pic_real']}" alt="Image" class="is-rounded">
-    //       </a>
-    //     </div>
-    //     <div class="media-content">
-    //       <div class="content">
-    //         <p>
-    //           <strong>${post['profile_name']}</strong>
-    //           <small>@${post['username']}</small>
-    //           <small>${time_before}</small>
-    //           <br>
-    //           ${post['comment']}
-    //         </p>
-    //       </div>
-    //       <nav class="level is-mobile">
-    //         <div class="level-left">
-    //           <a class="level-item is-sparta" aria-label="heart" onclick="toggle_like('${post['_id']}','heart')">
-    //             <span class="icon is-small">
-    //               <i class="fa ${class_heart}" area-hidden="true"></i>
-    //             </span>&nbsp;
-    //             <span class="like-num">${num2str(post['count_heart'])}</span>
-    //           </a>
+                    //                 let html_temp =
+                    //                     `
+                    //         <div class="box" id="${post['_id']}">
+                    //   <article class="media">
+                    //     <div class="media-left">
+                    //       <a href="/user/${post['username']}" class="image is-64x64">
+                    //         <img src="/static/${post['profile_pic_real']}" alt="Image" class="is-rounded">
+                    //       </a>
+                    //     </div>
+                    //     <div class="media-content">
+                    //       <div class="content">
+                    //         <p>
+                    //           <strong>${post['profile_name']}</strong>
+                    //           <small>@${post['username']}</small>
+                    //           <small>${time_before}</small>
+                    //           <br>
+                    //           ${post['comment']}
+                    //         </p>
+                    //       </div>
+                    //       <nav class="level is-mobile">
+                    //         <div class="level-left">
+                    //           <a class="level-item is-sparta" aria-label="heart" onclick="toggle_like('${post['_id']}','heart')">
+                    //             <span class="icon is-small">
+                    //               <i class="fa ${class_heart}" area-hidden="true"></i>
+                    //             </span>&nbsp;
+                    //             <span class="like-num">${num2str(post['count_heart'])}</span>
+                    //           </a>
 
-    //           <a class="level-item is-sparta" aria-label="star" onclick="toggle_star('${post['_id']}','star')">
-    //             <span class="icon is-small">
-    //               <i class="fa ${class_star}" area-hidden="true"></i>
-    //             </span>&nbsp;
-    //             <span class="like-num">${num2str(post['count_star'])}</span>
-    //           </a>
+                    //           <a class="level-item is-sparta" aria-label="star" onclick="toggle_star('${post['_id']}','star')">
+                    //             <span class="icon is-small">
+                    //               <i class="fa ${class_star}" area-hidden="true"></i>
+                    //             </span>&nbsp;
+                    //             <span class="like-num">${num2str(post['count_star'])}</span>
+                    //           </a>
 
-    //           <a class="level-item is-sparta" aria-label="thumbsup" onclick="toggle_thumbsup('${post['_id']}','thumbsup')">
-    //             <span class="icon is-small">
-    //               <i class="fa ${class_thumbsup}" area-hidden="true"></i>
-    //             </span>&nbsp;
-    //             <span class="like-num">${num2str(post['count_thumbsup'])}</span>
-    //           </a>
-    //         </div>
-    //       </nav>
-    //     </div>
-    //   </article>
-    // </div>
-    //         `;
+                    //           <a class="level-item is-sparta" aria-label="thumbsup" onclick="toggle_thumbsup('${post['_id']}','thumbsup')">
+                    //             <span class="icon is-small">
+                    //               <i class="fa ${class_thumbsup}" area-hidden="true"></i>
+                    //             </span>&nbsp;
+                    //             <span class="like-num">${num2str(post['count_thumbsup'])}</span>
+                    //           </a>
+                    //         </div>
+                    //       </nav>
+                    //     </div>
+                    //   </article>
+                    // </div>
+                    //         `;
                     let id = Iduser;
-                    let temp_data = post['username'] == user_username ? `
-            <div class="message mMess ${id}" data-number="${id}">
-            <div class="messArea">
-                <p id="sname">${post['username']}</p>
-                <div class="textM">${post['comment']}</div>
-                
-                <div class='flex gap-4'>
-              
-                <nav class="level is-mobile">
-                <div class="level-left">
-                  <a class="level-item is-sparta" aria-label="heart" onclick="toggle_like('${post['_id']}','heart')">
-                    <span class="icon is-small">
-                      <i class="fa ${class_heart}" area-hidden="true"></i>
-                    </span>&nbsp;
-                    <span class="like-num">${num2str(post['count_heart'])}</span>
-                  </a>
-    
-                  <a class="level-item is-sparta" aria-label="star" onclick="toggle_star('${post['_id']}','star')">
-                    <span class="icon is-small">
-                      <i class="fa ${class_star}" area-hidden="true"></i>
-                    </span>&nbsp;
-                    <span class="like-num">${num2str(post['count_star'])}</span>
-                  </a>
-    
-                  <a class="level-item is-sparta" aria-label="thumbsup" onclick="toggle_thumbsup('${post['_id']}','thumbsup')">
-                    <span class="icon is-small">
-                      <i class="fa ${class_thumbsup}" area-hidden="true"></i>
-                    </span>&nbsp;
-                    <span class="like-num">${num2str(post['count_thumbsup'])}</span>
-                  </a>
-                </div>
-              </nav>
-
-                </div>
-
-                <small>${time_before}</small>
-                </div>
-                <div class="prof">
-                <a href="/user/${post['username']}">
-            <img src="/static/${post['profile_pic_real']}" alt="Image" class='user'>
-          </a>
-          
-                </div>
-                
-        </div>
-            ` : `
-            <div class="message"><div class="prof">
-            <a href="/user/${post['username']}">
-            <img src="/static/${post['profile_pic_real']}" alt="Image" class='user'>
-          </a>
-            </div>
-      <div class="messArea">
-      
-          <p id="sname">${post['profile_name']}</p>
-          <div class="textM">${post['comment']}</div>
+                    let temp_data = ""
+                    const htmlTagRegex = /<\/?[\w\s="/.':;#-\/\?]+>/g;
+                    const hasHtmlTags = htmlTagRegex.test(post['comment']);
+                    if (post['username'] == user_username) {
+                        temp_data = `
+                <div class="message mMess ${id}" data-number="${id}">
+                <div class="messArea">
+                    <p id="sname">${post['username']}</p>
+                    <div class="textM">${post['comment']}</div>
+                    
+                    <div class='flex gap-4'>
+                  
+                    <nav class="level is-mobile">
+                    <div class="level-left">
+                      <a class="level-item is-sparta" aria-label="heart" onclick="toggle_like('${post['_id']}','heart')">
+                        <span class="icon is-small">
+                          <i class="fa ${class_heart}" area-hidden="true"></i>
+                        </span>&nbsp;
+                        <span class="like-num">${num2str(post['count_heart'])}</span>
+                      </a>
         
-          <div class='flex  gap-4'>
+                      <a class="level-item is-sparta" aria-label="star" onclick="toggle_star('${post['_id']}','star')">
+                        <span class="icon is-small">
+                          <i class="fa ${class_star}" area-hidden="true"></i>
+                        </span>&nbsp;
+                        <span class="like-num">${num2str(post['count_star'])}</span>
+                      </a>
+        
+                      <a class="level-item is-sparta" aria-label="thumbsup" onclick="toggle_thumbsup('${post['_id']}','thumbsup')">
+                        <span class="icon is-small">
+                          <i class="fa ${class_thumbsup}" area-hidden="true"></i>
+                        </span>&nbsp;
+                        <span class="like-num">${num2str(post['count_thumbsup'])}</span>
+                      </a>
+                    </div>
+                  </nav>
+    
+                    </div>
+    
+                    <small>${time_before}</small>
+                    </div>
+                    <div class="prof">
+                    <a href="/user/${post['username']}">
+                <img src="/static/${post['profile_pic_real']}" alt="Image" class='user'>
+              </a>
+              
+                    </div>
+                    
+            </div>
+                `
+                    } else if (hasHtmlTags) {
+                        temp_data = post['comment']
+
+                    }
+                    else {
+                        temp_data = `
+                <div class="message"><div class="prof">
+                <a href="/user/${post['username']}">
+                <img src="/static/${post['profile_pic_real']}" alt="Image" class='user'>
+              </a>
+                </div>
+          <div class="messArea">
           
-          <nav class="level is-mobile">
-          <div class="level-left">
-            <a class="level-item is-sparta" aria-label="heart" onclick="toggle_like('${post['_id']}','heart')">
-              <span class="icon is-small">
-                <i class="fa ${class_heart}" area-hidden="true"></i>
-              </span>&nbsp;
-              <span class="like-num">${num2str(post['count_heart'])}</span>
-            </a>
-
-            <a class="level-item is-sparta" aria-label="star" onclick="toggle_star('${post['_id']}','star')">
-              <span class="icon is-small">
-                <i class="fa ${class_star}" area-hidden="true"></i>
-              </span>&nbsp;
-              <span class="like-num">${num2str(post['count_star'])}</span>
-            </a>
-
-            <a class="level-item is-sparta" aria-label="thumbsup" onclick="toggle_thumbsup('${post['_id']}','thumbsup')">
-              <span class="icon is-small">
-                <i class="fa ${class_thumbsup}" area-hidden="true"></i>
-              </span>&nbsp;
-              <span class="like-num">${num2str(post['count_thumbsup'])}</span>
-            </a>
+              <p id="sname">${post['profile_name']}</p>
+              <div class="textM">${post['comment']}</div>
+            
+              <div class='flex  gap-4'>
+              
+              <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item is-sparta" aria-label="heart" onclick="toggle_like('${post['_id']}','heart')">
+                  <span class="icon is-small">
+                    <i class="fa ${class_heart}" area-hidden="true"></i>
+                  </span>&nbsp;
+                  <span class="like-num">${num2str(post['count_heart'])}</span>
+                </a>
+    
+                <a class="level-item is-sparta" aria-label="star" onclick="toggle_star('${post['_id']}','star')">
+                  <span class="icon is-small">
+                    <i class="fa ${class_star}" area-hidden="true"></i>
+                  </span>&nbsp;
+                  <span class="like-num">${num2str(post['count_star'])}</span>
+                </a>
+    
+                <a class="level-item is-sparta" aria-label="thumbsup" onclick="toggle_thumbsup('${post['_id']}','thumbsup')">
+                  <span class="icon is-small">
+                    <i class="fa ${class_thumbsup}" area-hidden="true"></i>
+                  </span>&nbsp;
+                  <span class="like-num">${num2str(post['count_thumbsup'])}</span>
+                </a>
+              </div>
+            </nav>
+    
+              </div>
+              <small>${time_before}</small>
           </div>
-        </nav>
-
-          </div>
-          <small>${time_before}</small>
-      </div>
-            `
+                `
+                    }
 
                     $('#chatMessages').append(temp_data)
                 }
@@ -326,6 +337,8 @@ function num2str(count) {
 
     return count
 }
+
+
 
 /**
  * * Chatbot

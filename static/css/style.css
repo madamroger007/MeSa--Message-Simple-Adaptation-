@@ -539,3 +539,49 @@ color: gray;
 input::-webkit-calendar-picker-indicator{
     display: none;
 }
+
+/* Vido Sdk */
+.stream-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#video-streams{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    height: 90vh;
+    width: 100%;
+    margin:0 auto;
+}
+
+.video-container{
+    max-height: 100%;
+    border: 2px solid black;
+    background-color: #203A49;
+}
+
+.video-player{
+    height: 100%;
+    width: 100%;
+}
+
+#stream-controls{
+    justify-content: center;
+    margin-top:0.5em;
+}
+
+#stream-controls>button{
+border-radius: 10%;
+background-color: blue;
+font-weight: 500;
+padding: 10px;
+color: #c7c7c7;
+}
+@media screen and (max-width:1400px){
+    #video-streams{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        width: 95%;
+    }
+}
